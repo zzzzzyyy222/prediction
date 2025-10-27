@@ -19,7 +19,8 @@ st.set_page_config(page_title="Sleep Health Dashboard", layout="wide")
 
 # Load data safely
 @st.cache_data
-def load_data(path="SleepHealth/Sleep_health_and_lifestyle_dataset.csv"):
+def load_data(image_path = "SleepHealth/photo-1666875753105-c63a6f3bdc86.jpeg"
+):
     try:
         df = pd.read_csv(path)
         df.columns = [c.strip() for c in df.columns]
